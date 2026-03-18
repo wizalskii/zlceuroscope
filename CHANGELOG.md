@@ -7,43 +7,53 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Initial Release Features
-- Complete position definitions for ZLC ARTCC
+### Major Features
+- **Complete AIRAC Navigation Data** (1.5 MB sector file)
+  - 215 VOR stations
+  - 26 NDB stations
+  - 13,546 navigation fixes
+  - 2,554 airports
+  - 892 runway definitions
+  - 3,695 low altitude airway segments
+  - 1,162 high altitude airway segments
+- Complete position definitions for ZLC ARTCC (86 total)
   - 34 center positions
   - 22 TRACON positions across 8 facilities
   - 30 tower positions across 10 facilities
-- Basic sector file structure (ZLC.sct)
 - Extended sector extension with all positions (ZLC.ese)
 - Default profile settings (ZLC.prf)
 - 19 radar display files (ASR/)
   - 1 center display
   - 8 TRACON displays
   - 10 tower displays
-- Automation tools
-  - json_to_sct.py - Sector file generator
-  - json_to_ese.py - Position file generator
-  - generate_asr.py - ASR file generator
-  - validate.py - File format validator
-- Documentation
-  - Installation guide
-  - Position reference
-  - Update procedures
+
+### Automation Tools
+- json_to_ese.py - Position file generator
+- generate_asr.py - ASR file generator
+- extract_zlc_data.py - Extract ZLC AIRAC from FE-BUDDY
+- integrate_airac_data.py - Integrate AIRAC into sector file
+- validate.py - File format validator
+
+### Documentation
+- Installation guide
+- Position reference (86 positions)
+- Update procedures
+- Complete README
 
 ### Known Limitations
-- Navigation aids (VORs, NDBs) not yet included
-- Fixes and waypoints not yet included
-- Airways not yet defined
-- SID/STAR procedures not yet included
-- Airspace boundaries need refinement
-- Geographic features limited
+- SID/STAR procedures not yet extracted
+- ARTCC sector boundaries need definition
+- TRACON airspace boundaries need definition
+- Special use airspace not included
+- Geographic features (state lines) not included
 
 ### Planned Improvements
-- Add complete navigation database
-- Add airways from FAA database
-- Add SID/STAR procedures
-- Define detailed sector boundaries
+- Extract and add SID/STAR procedures
+- Define detailed sector boundaries from facility documentation
+- Add TRACON airspace definitions
+- Add special use airspace
 - Add geographic features
-- Implement AIRAC cycle automation
+- Implement automated AIRAC cycle updates
 
 ## Version History
 

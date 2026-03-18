@@ -40,8 +40,12 @@ build/
 # OS files
 .DS_Store
 
+# FE-BUDDY output (source data - too large for git)
+febuddyoutput/
+
 # Keep
 !Data/ZLC.json
 !Tools/*.py
 !ASR/*.asr
 !Docs/*.md
+!AIRAC_Data/*.sct2
