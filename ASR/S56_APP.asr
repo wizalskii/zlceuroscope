@@ -1,0 +1,24 @@
+; S56 TRACON Radar Display
+; Terminal area view
+
+[DISPLAY]
+DisplayTypeName:Standard ES radar screen
+DisplayTypeGeoReferenced:1
+Free Text:S56 Approach|N040.47.14.000:W111.58.44.000|255:255:255
+View Cursor:N040.47.14.000:W111.58.44.000
+Zoom:2.0
+
+[SYMBOLSIZE]
+AC Symbol:1
+AC Symbol Heading:1
+
+[FILTERS]
+Altitude Filter:1:0:18000
+Show All Aircraft:1
+
+[COLOR DEFINITION]
+Color_1:255:0:0
+Color_2:0:255:0
+Color_3:0:0:255
+Color_4:255:255:0
+

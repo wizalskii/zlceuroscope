@@ -1,0 +1,101 @@
+; ZLC ARTCC - Sector File
+; Salt Lake City Air Route Traffic Control Center
+; Generated from ZLC.json
+;
+; This is a basic sector file structure.
+; Navigation aids, airways, and detailed geographic data
+; should be added from FAA or VATSIM sources.
+;
+
+[INFO]
+ZLC
+N040.47.23.456
+W111.58.41.234
+60
+.sct
+KSLC
+N
+W
+
+[VOR]
+; Name:Freq:Lat:Lon
+; TODO: Add VOR stations from FAA navigation database
+; Example: SLC 116.800 N040.46.40.000 W111.57.48.000
+
+[NDB]
+; Name:Freq:Lat:Lon
+; TODO: Add NDB stations from FAA navigation database
+
+[FIXES]
+; Name:Lat:Lon
+; TODO: Add navigation fixes from FAA database
+; These are critical for airways and procedures
+
+[AIRPORT]
+; ICAO:Freq:Lat:Lon:Name
+; Major airports in ZLC airspace
+KSLC 119.400 N040.47.14.000 W111.58.44.000 Salt Lake City Intl
+KBOI 118.300 N043.33.49.000 W116.13.23.000 Boise Air Terminal
+KJAC 118.075 N043.36.20.000 W110.44.16.000 Jackson Hole
+KIDA 118.300 N043.30.51.000 W112.04.10.000 Idaho Falls Regional
+KBIL 119.500 N045.48.22.000 W108.32.34.000 Billings Logan Intl
+KMSO 125.300 N046.54.57.000 W114.05.28.000 Missoula Intl
+KHLN 126.200 N046.36.28.000 W111.59.02.000 Helena Regional
+KGTF 132.650 N047.28.55.000 W111.22.17.000 Great Falls Intl
+KOGD 127.800 N041.11.45.000 W112.00.43.000 Ogden-Hinckley
+KPVU 119.200 N040.13.16.000 W111.43.23.000 Provo Municipal
+KSUN 125.400 N043.30.16.000 W114.17.50.000 Friedman Memorial
+KPIH 124.175 N042.54.37.000 W112.35.43.000 Pocatello Regional
+KTWF 119.500 N042.28.56.000 W114.29.16.000 Twin Falls
+
+[RUNWAY]
+; RwyNum:Heading:Lat1:Lon1:Lat2:Lon2:Airport
+; TODO: Add runway definitions for all airports
+; KSLC major runways
+16L 160 N040.47.56.000 W111.58.16.000 N040.44.44.000 W111.57.56.000 KSLC
+16R 160 N040.47.56.000 W111.59.12.000 N040.44.44.000 W111.58.52.000 KSLC
+34L 340 N040.44.44.000 W111.58.52.000 N040.47.56.000 W111.59.12.000 KSLC
+34R 340 N040.44.44.000 W111.57.56.000 N040.47.56.000 W111.58.16.000 KSLC
+
+[LOW AIRWAY]
+; Name:Start:End
+; TODO: Add low altitude airways from FAA database
+; Format: V123 FIX1 FIX2
+
+[HIGH AIRWAY]
+; Name:Start:End
+; TODO: Add high altitude airways (Jet routes) from FAA database
+; Format: J123 FIX1 FIX2
+
+[ARTCC]
+; ZLC ARTCC Boundary
+; TODO: Add precise boundary coordinates
+; These define the lateral limits of ZLC airspace
+
+[ARTCC HIGH]
+; ZLC High Altitude Boundary
+; TODO: Add high altitude sector boundaries
+
+[ARTCC LOW]
+; ZLC Low Altitude Boundary
+; TODO: Add low altitude sector boundaries
+
+[SID]
+; Standard Instrument Departures
+; TODO: Add SID routes from approach plates
+; Format: SIDNAME FIX1 FIX2
+
+[STAR]
+; Standard Terminal Arrival Routes
+; TODO: Add STAR routes from approach plates
+; Format: STARNAME FIX1 FIX2
+
+[GEO]
+; Geographic features and visual references
+; State boundaries, coastlines, etc.
+; TODO: Add geographic features
+
+[REGIONS]
+; Defined airspace regions
+; TODO: Add TRACON and Tower airspace boundaries
+

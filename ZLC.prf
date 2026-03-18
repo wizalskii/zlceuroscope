@@ -1,0 +1,70 @@
+;ZLC ARTCC - Profile Settings
+;Salt Lake City Air Route Traffic Control Center
+
+[SETTINGS]
+DisplayRotation=0.00000
+DisplayTypeName=Standard ES radar screen
+DisplayTypeNeedRadarContent=1
+DisplayTypeGeoReferenced=1
+SECTORFILE=
+SECTORTITLE=
+Free Text=
+Free Text\0\X=0
+Free Text\0\Y=0
+Free Text\0\R=255
+Free Text\0\G=0
+Free Text\0\B=0
+WindowArea\0\ASEL=1
+WindowArea\0\AREAMIN=0
+WindowArea\0\AREAMAX=0
+
+[ASR]
+;Active radar display file
+FileName=ASR\ZLC_CTR.asr
+
+[CONTROLLER]
+;Default controller position
+Callsign=
+RealName=
+Rating=0
+Facility=0
+Range=200
+Squawk=0
+
+[PLUGINS]
+;Plugin configurations
+
+[QUICKACCESS]
+;Quick access positions
+
+[LABELS]
+;Label display settings
+
+[COORDINATIONLISTS]
+
+[GROUND RADAR MAP]
+
+[COMMUNICATION SETUP]
+
+[VOICE CHANNELS]
+
+[SUPERVISOR]
+
+[STARTUP]
+AIRPORT=KSLC
+CENTER=N040.47.23.456:W111.58.41.234
+RANGE=200
+
+[PRESET]
+
+[FREETEXT]
+
+[FILTERS]
+
+[WINDOWS]
+
+[ALIAS]
+
+[MESSAGEREWRITE]
+
+[SYMBOLRULE]

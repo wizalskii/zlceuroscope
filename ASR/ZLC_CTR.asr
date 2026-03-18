@@ -1,0 +1,28 @@
+; ZLC Center Radar Display
+; High altitude view for center positions
+
+[DISPLAY]
+DisplayTypeName:Standard ES radar screen
+DisplayTypeGeoReferenced:1
+Free Text:ZLC Center|N040.47.23.456:W111.58.41.234|255:255:255
+View Cursor:N040.47.23.456:W111.58.41.234
+Zoom:0.5
+
+[SYMBOLSIZE]
+AC Symbol:1
+AC Symbol Heading:1
+
+[FILTERS]
+Altitude Filter:1:0:99999
+Show All Aircraft:1
+
+[COLOR DEFINITION]
+Color_1:255:0:0
+Color_2:0:255:0
+Color_3:0:0:255
+Color_4:255:255:0
+Color_5:255:0:255
+Color_6:0:255:255
+Color_7:192:192:192
+Color_8:128:128:128
+

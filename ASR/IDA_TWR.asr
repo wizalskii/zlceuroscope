@@ -1,0 +1,23 @@
+; IDA Tower Radar Display
+; Airport surface and local area view
+
+[DISPLAY]
+DisplayTypeName:Standard ES radar screen
+DisplayTypeGeoReferenced:1
+Free Text:IDA Tower|N043.30.51.000:W112.04.10.000|255:255:255
+View Cursor:N043.30.51.000:W112.04.10.000
+Zoom:5.0
+
+[SYMBOLSIZE]
+AC Symbol:1
+AC Symbol Heading:1
+
+[FILTERS]
+Altitude Filter:1:0:5000
+Show All Aircraft:1
+
+[COLOR DEFINITION]
+Color_1:255:0:0
+Color_2:0:255:0
+Color_3:0:0:255
+

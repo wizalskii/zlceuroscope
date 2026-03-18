@@ -1,0 +1,47 @@
+# Euroscope cache and temporary files
+*.txt
+*.log
+*_BACKUP_*
+*_LOCAL_*
+*_REMOTE_*
+
+# User-specific profile files
+*_custom.prf
+*_personal.prf
+
+# Euroscope settings
+Settings/
+PluginData/
+
+# Windows
+Thumbs.db
+Desktop.ini
+*.lnk
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+
+# Keep
+!Data/ZLC.json
+!Tools/*.py
+!ASR/*.asr
+!Docs/*.md
