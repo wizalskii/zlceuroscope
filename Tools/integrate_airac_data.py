@@ -213,6 +213,15 @@ def build_complete_sct():
                     if not line.startswith('[GEO]'):
                         f.write(line)
 
+        # Add Radar Vector Maps (RVM) - Standard
+        rvm_std = video_maps_dir / 'ZLC_RVM_Standard.txt'
+        if rvm_std.exists():
+            print("Adding Radar Vector Maps (Standard)...")
+            with open(rvm_std, 'r', encoding='latin-1') as rvm:
+                for line in rvm:
+                    if not line.startswith('[GEO]'):
+                        f.write(line)
+
         f.write("\n")
 
         # [REGIONS] section

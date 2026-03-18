@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Major Features
-- **Complete AIRAC Navigation Data** (4.0 MB sector file)
+- **Complete AIRAC Navigation Data** (4.8 MB sector file)
   - 215 VOR stations
   - 26 NDB stations
   - 13,546 navigation fixes
@@ -23,6 +23,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Individual toggle for each TRACON in Euroscope
     - BIL, BOI, BZN, GTF, MSO, MUO, S56, TWF
   - CAB airspace (Class B/C/D)
+- **Radar Vector Maps (RVM)**
+  - Standard RVMs for 6 TRACON facilities (BIL, BOI, BZN, GTF, MSO, S56)
+  - Visual reference maps showing terrain, obstacles, navigation features
+  - Alternate RVMs available separately in VideoMaps/
+  - Extracted from CRC GeoJSON data
 - **Airport Diagrams**
   - 16 major airports with detailed diagrams
   - Runways, taxiways, and terminal areas

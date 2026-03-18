@@ -51,7 +51,7 @@ For detailed installation instructions, see [Docs/installation.md](Docs/installa
 ## File Structure
 
 ```
-ZLC.sct          - Main sector file with complete AIRAC data (4.0 MB)
+ZLC.sct          - Main sector file with complete AIRAC data (4.8 MB)
   - 215 VORs
   - 26 NDBs
   - 13,546 Fixes
@@ -63,6 +63,7 @@ ZLC.sct          - Main sector file with complete AIRAC data (4.0 MB)
   - ZLC Sector boundaries (video maps)
   - 457 TRACON boundary segments (selectable)
     - BIL, BOI, BZN, GTF, MSO, MUO, S56, TWF
+  - Radar Vector Maps (RVM) - 6 TRACON facilities
   - CAB airspace
   - Airport diagrams (16 airports)
 ZLC.ese          - Extended sector extension (86 positions)
@@ -108,9 +109,9 @@ Tools/           - Automation scripts
 
 See [Docs/positions.md](Docs/positions.md) for a complete list of all positions with callsigns and frequencies.
 
-### Displaying Boundaries
+### Displaying Boundaries and Video Maps
 
-In Euroscope, you can toggle different boundary types:
+In Euroscope, you can toggle different boundary types and visual aids:
 
 1. **ARTCC Boundary**: Go to Setup > Sector File > ARTCC
 2. **TRACON Boundaries**: Go to Setup > Sector File > ARTCC Low
@@ -118,6 +119,9 @@ In Euroscope, you can toggle different boundary types:
    - BIL_TRACON, BOI_TRACON, BZN_TRACON, GTF_TRACON
    - MSO_TRACON, MUO_TRACON, S56_TRACON, TWF_TRACON
 3. **Sector Boundaries**: Displayed in the main radar view as video maps
+4. **Radar Vector Maps (RVM)**: Visual reference maps showing terrain, obstacles, and navigation references
+   - Standard RVMs included for all TRACONs
+   - Alternate RVMs available separately in VideoMaps/ directory
 
 ## Requirements
 

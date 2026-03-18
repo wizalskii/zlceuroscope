@@ -59,7 +59,10 @@ def convert_geojson_to_geo(geojson_file, output_file, append=False):
         out.write(f";\n; {name}\n;\n")
 
         for feature in features:
-            geometry = feature.get('geometry', {})
+            geometry = feature.get('geometry')
+            if not geometry:
+                continue  # Skip features without geometry
+
             properties = feature.get('properties', {})
             geom_type = geometry.get('type')
             coordinates = geometry.get('coordinates', [])
