@@ -51,7 +51,7 @@ For detailed installation instructions, see [Docs/installation.md](Docs/installa
 ## File Structure
 
 ```
-ZLC.sct          - Main sector file with complete AIRAC data (1.5 MB)
+ZLC.sct          - Main sector file with complete AIRAC data (4.0 MB)
   - 215 VORs
   - 26 NDBs
   - 13,546 Fixes
@@ -59,6 +59,11 @@ ZLC.sct          - Main sector file with complete AIRAC data (1.5 MB)
   - 892 Runways
   - 3,695 Low Airway segments
   - 1,162 High Airway segments
+  - 129 ARTCC boundary segments
+  - ZLC Sector boundaries (video maps)
+  - TRACON boundaries
+  - CAB airspace
+  - Airport diagrams (16 airports)
 ZLC.ese          - Extended sector extension (86 positions)
 ZLC.prf          - Default profile settings
 ASR/             - Radar display files (19 files)
@@ -66,15 +71,26 @@ ASR/             - Radar display files (19 files)
   *_APP.asr      - TRACON radar displays
   *_TWR.asr      - Tower radar displays
 AIRAC_Data/      - Extracted ZLC-specific AIRAC data
+VideoMaps/       - Converted video maps from CRC GeoJSON
+  - Sector boundaries
+  - TRACON boundaries
+  - CAB airspace
+  - MVA charts
+  - Airport procedures
+VRC_Data/        - Extracted data from VRC sector files
+  - ARTCC boundaries
+  - Airport diagrams
 Data/            - Source data
   ZLC.json       - Facility data from CRC
 Tools/           - Automation scripts
-  json_to_sct.py       - Generate .sct from JSON
-  json_to_ese.py       - Generate .ese from JSON
-  generate_asr.py      - Generate ASR files
-  extract_zlc_data.py  - Extract AIRAC data from FE-BUDDY
-  integrate_airac_data.py - Integrate AIRAC into .sct
-  validate.py          - Validate file formats
+  json_to_sct.py           - Generate .sct from JSON
+  json_to_ese.py           - Generate .ese from JSON
+  generate_asr.py          - Generate ASR files
+  extract_zlc_data.py      - Extract AIRAC data from FE-BUDDY
+  convert_geojson_to_geo.py - Convert CRC GeoJSON to Euroscope
+  extract_vrc_data.py      - Extract data from VRC files
+  integrate_airac_data.py  - Integrate all data into .sct
+  validate.py              - Validate file formats
 ```
 
 ## Usage

@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Major Features
-- **Complete AIRAC Navigation Data** (1.5 MB sector file)
+- **Complete AIRAC Navigation Data** (4.0 MB sector file)
   - 215 VOR stations
   - 26 NDB stations
   - 13,546 navigation fixes
@@ -16,6 +16,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - 892 runway definitions
   - 3,695 low altitude airway segments
   - 1,162 high altitude airway segments
+- **Sector and Airspace Boundaries**
+  - 129 ZLC ARTCC boundary segments
+  - ZLC sector boundaries (video maps from CRC)
+  - TRACON boundaries
+  - CAB airspace (Class B/C/D)
+- **Airport Diagrams**
+  - 16 major airports with detailed diagrams
+  - Runways, taxiways, and terminal areas
+  - Extracted from VRC sector files
 - Complete position definitions for ZLC ARTCC (86 total)
   - 34 center positions
   - 22 TRACON positions across 8 facilities
@@ -31,7 +40,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - json_to_ese.py - Position file generator
 - generate_asr.py - ASR file generator
 - extract_zlc_data.py - Extract ZLC AIRAC from FE-BUDDY
-- integrate_airac_data.py - Integrate AIRAC into sector file
+- convert_geojson_to_geo.py - Convert CRC GeoJSON video maps
+- extract_vrc_data.py - Extract boundaries and diagrams from VRC
+- integrate_airac_data.py - Integrate all data into sector file
 - validate.py - File format validator
 
 ### Documentation
@@ -41,11 +52,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Complete README
 
 ### Known Limitations
-- SID/STAR procedures not yet extracted
-- ARTCC sector boundaries need definition
-- TRACON airspace boundaries need definition
+- SID/STAR procedures not yet extracted from GeoJSON
 - Special use airspace not included
-- Geographic features (state lines) not included
+- Geographic features (state lines, terrain) not included
+- MVA charts available but not integrated into main sector file
 
 ### Planned Improvements
 - Extract and add SID/STAR procedures

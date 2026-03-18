@@ -122,10 +122,18 @@ def build_complete_sct():
         print(f"  Added {len(high_airway_lines)} High Airway segments")
         f.write("\n")
 
-        # [ARTCC] section - Placeholder for now
+        # [ARTCC] section - ZLC Boundary
         f.write("[ARTCC]\n")
         f.write("; ZLC ARTCC Boundary\n")
-        f.write("; TODO: Add precise boundary coordinates from facility documentation\n")
+        print("Adding ARTCC Boundaries...")
+
+        vrc_boundaries = repo_root / 'VRC_Data' / 'ZLC_ARTCC_Boundaries.txt'
+        if vrc_boundaries.exists():
+            with open(vrc_boundaries, 'r', encoding='latin-1') as vrc:
+                for line in vrc:
+                    if not line.startswith('[ARTCC]'):  # Skip section header
+                        f.write(line)
+
         f.write("\n")
 
         # [ARTCC HIGH] section
@@ -152,10 +160,48 @@ def build_complete_sct():
         f.write("; TODO: Add STAR routes from extracted procedures\n")
         f.write("\n")
 
-        # [GEO] section
+        # [GEO] section - Video Maps
         f.write("[GEO]\n")
-        f.write("; Geographic features\n")
-        f.write("; State boundaries would go here\n")
+        f.write("; Geographic features and Video Maps\n")
+        f.write(";\n")
+
+        # Add sector boundaries
+        video_maps_dir = repo_root / 'VideoMaps'
+        sector_boundaries = video_maps_dir / 'ERAM_FILTER_01_ZLC_SECTOR_BOUNDARIES.txt'
+        if sector_boundaries.exists():
+            print("Adding ZLC Sector Boundaries...")
+            with open(sector_boundaries, 'r', encoding='latin-1') as vmap:
+                for line in vmap:
+                    if not line.startswith('[GEO]'):  # Skip section header
+                        f.write(line)
+
+        # Add TRACON boundaries
+        tracon_boundaries = video_maps_dir / 'ERAM_FILTER_04_APPROACH_CONTROL_BOUNDARIES.txt'
+        if tracon_boundaries.exists():
+            print("Adding TRACON Boundaries...")
+            with open(tracon_boundaries, 'r', encoding='latin-1') as vmap:
+                for line in vmap:
+                    if not line.startswith('[GEO]'):
+                        f.write(line)
+
+        # Add CAB airspace
+        cab_airspace = video_maps_dir / 'ZLC_CAB_Airspace.txt'
+        if cab_airspace.exists():
+            print("Adding CAB Airspace...")
+            with open(cab_airspace, 'r', encoding='latin-1') as vmap:
+                for line in vmap:
+                    if not line.startswith('[GEO]'):
+                        f.write(line)
+
+        # Add airport diagrams
+        airport_diagrams = repo_root / 'VRC_Data' / 'ZLC_Airport_Diagrams.txt'
+        if airport_diagrams.exists():
+            print("Adding Airport Diagrams...")
+            with open(airport_diagrams, 'r', encoding='latin-1') as diagrams:
+                for line in diagrams:
+                    if not line.startswith('[GEO]'):
+                        f.write(line)
+
         f.write("\n")
 
         # [REGIONS] section
