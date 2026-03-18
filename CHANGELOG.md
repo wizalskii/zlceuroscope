@@ -19,7 +19,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Sector and Airspace Boundaries**
   - 129 ZLC ARTCC boundary segments
   - ZLC sector boundaries (video maps from CRC)
-  - TRACON boundaries
+  - 457 selectable TRACON boundaries (8 facilities)
+    - Individual toggle for each TRACON in Euroscope
+    - BIL, BOI, BZN, GTF, MSO, MUO, S56, TWF
   - CAB airspace (Class B/C/D)
 - **Airport Diagrams**
   - 16 major airports with detailed diagrams
@@ -41,6 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - generate_asr.py - ASR file generator
 - extract_zlc_data.py - Extract ZLC AIRAC from FE-BUDDY
 - convert_geojson_to_geo.py - Convert CRC GeoJSON video maps
+- create_tracon_regions.py - Create selectable TRACON boundaries
 - extract_vrc_data.py - Extract boundaries and diagrams from VRC
 - integrate_airac_data.py - Integrate all data into sector file
 - validate.py - File format validator

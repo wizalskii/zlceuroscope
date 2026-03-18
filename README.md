@@ -61,7 +61,8 @@ ZLC.sct          - Main sector file with complete AIRAC data (4.0 MB)
   - 1,162 High Airway segments
   - 129 ARTCC boundary segments
   - ZLC Sector boundaries (video maps)
-  - TRACON boundaries
+  - 457 TRACON boundary segments (selectable)
+    - BIL, BOI, BZN, GTF, MSO, MUO, S56, TWF
   - CAB airspace
   - Airport diagrams (16 airports)
 ZLC.ese          - Extended sector extension (86 positions)
@@ -106,6 +107,17 @@ Tools/           - Automation scripts
 ### Position Reference
 
 See [Docs/positions.md](Docs/positions.md) for a complete list of all positions with callsigns and frequencies.
+
+### Displaying Boundaries
+
+In Euroscope, you can toggle different boundary types:
+
+1. **ARTCC Boundary**: Go to Setup > Sector File > ARTCC
+2. **TRACON Boundaries**: Go to Setup > Sector File > ARTCC Low
+   - Each TRACON can be toggled individually:
+   - BIL_TRACON, BOI_TRACON, BZN_TRACON, GTF_TRACON
+   - MSO_TRACON, MUO_TRACON, S56_TRACON, TWF_TRACON
+3. **Sector Boundaries**: Displayed in the main radar view as video maps
 
 ## Requirements
 

@@ -142,10 +142,21 @@ def build_complete_sct():
         f.write("; TODO: Add high altitude sector boundaries\n")
         f.write("\n")
 
-        # [ARTCC LOW] section
+        # [ARTCC LOW] section - TRACON Boundaries
         f.write("[ARTCC LOW]\n")
-        f.write("; ZLC Low Altitude Boundary\n")
-        f.write("; TODO: Add low altitude sector boundaries\n")
+        f.write("; ZLC Low Altitude Boundaries\n")
+        f.write(";\n")
+
+        # Add TRACON boundaries (selectable)
+        video_maps_dir = repo_root / 'VideoMaps'
+        tracon_regions = video_maps_dir / 'ZLC_TRACON_Regions.txt'
+        if tracon_regions.exists():
+            print("Adding TRACON Boundaries (selectable)...")
+            with open(tracon_regions, 'r', encoding='latin-1') as tracons:
+                for line in tracons:
+                    if not line.startswith('[ARTCC LOW]'):  # Skip section header
+                        f.write(line)
+
         f.write("\n")
 
         # [SID] section
